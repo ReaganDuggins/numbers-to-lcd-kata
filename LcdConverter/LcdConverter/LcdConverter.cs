@@ -39,14 +39,21 @@ namespace LcdConverter
                     { "mid", " _|" },
                     { "bot", "|_ " }
                 }
+            },
+            {
+                1 , new Dictionary<string, string>() {
+                    { "top", "   " },
+                    { "mid", "  |" },
+                    { "bot", "  |" }
+                }
             }
         };
 
         public static string Convert(int number)
         {
-            string top = "   ";
-            string mid = "  |";
-            string bot = "  |";
+            string top = LcdNumbers[1]["top"];
+            string mid = LcdNumbers[1]["mid"];
+            string bot = LcdNumbers[1]["bot"];
 
             if (number == 2)
             {
