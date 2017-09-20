@@ -26,6 +26,14 @@ namespace LcdConverter
                                                             "|_ "));
         }
 
+        [Test]
+        public void TestConvert12()
+        {
+            Assert.That(LcdConverter.Convert(12), Is.EqualTo("    _ " + "\n" +
+                                                            "  | _|" + "\n" +
+                                                            "  ||_ "));
+        }
+
     }
 
     public class LcdConverter
