@@ -38,7 +38,9 @@ namespace LcdConverter
                        " _|" + "\n" +
                        "|_ ";
             }
-            return "   \n  |\n  |";
+            return "   " + "\n" +
+                   "  |" + "\n" +
+                   "  |";
         }
     }
 }
