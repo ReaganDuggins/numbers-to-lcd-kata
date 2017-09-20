@@ -36,6 +36,8 @@ namespace LcdConverter
             {
                 2 , new Dictionary<string, string>() {
                     { "top", " _ " },
+                    { "mid", " _|" },
+                    { "bot", "|_ " }
                 }
             }
         };
@@ -49,8 +51,8 @@ namespace LcdConverter
             if (number == 2)
             {
                 top = LcdNumbers[2]["top"];
-                mid = " _|";
-                bot = "|_ ";
+                mid = LcdNumbers[2]["mid"];
+                bot = LcdNumbers[2]["bot"];
             }
             
             return top + "\n" +
