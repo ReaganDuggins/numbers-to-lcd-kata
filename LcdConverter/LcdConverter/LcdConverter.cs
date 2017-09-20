@@ -13,8 +13,11 @@ namespace LcdConverter
         [Test]
         public void TestConvert1()
         {
-            Assert.That(LcdConverter.Convert(1), Is.EqualTo("   \n  |\n  |"));
+            Assert.That(LcdConverter.Convert(1), Is.EqualTo("   " + "\n" + 
+                                                            "  |" + "\n" + 
+                                                            "  |"));
         }
+
     }
 
     public class LcdConverter
