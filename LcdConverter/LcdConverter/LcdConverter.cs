@@ -30,6 +30,16 @@ namespace LcdConverter
 
     public class LcdConverter
     {
+
+        private static Dictionary<int, Dictionary<string, string>> LcdNumbers = new Dictionary<int, Dictionary<string, string>>()
+        {
+            {
+                2 , new Dictionary<string, string>() {
+                    { "top", " _ " },
+                }
+            }
+        };
+
         public static string Convert(int number)
         {
             string top = "   ";
@@ -38,7 +48,7 @@ namespace LcdConverter
 
             if (number == 2)
             {
-                top = " _ ";
+                top = LcdNumbers[2]["top"];
                 mid = " _|";
                 bot = "|_ ";
             }
