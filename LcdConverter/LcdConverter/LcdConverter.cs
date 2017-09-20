@@ -39,17 +39,17 @@ namespace LcdConverter
     public class LcdConverter
     {
 
-        private static Dictionary<int, Dictionary<string, string>> LcdNumbers = new Dictionary<int, Dictionary<string, string>>()
+        private static Dictionary<char, Dictionary<string, string>> LcdNumbers = new Dictionary<char, Dictionary<string, string>>()
         {
             {
-                2 , new Dictionary<string, string>() {
+                '2' , new Dictionary<string, string>() {
                     { "top", " _ " },
                     { "mid", " _|" },
                     { "bot", "|_ " }
                 }
             },
             {
-                1 , new Dictionary<string, string>() {
+                '1' , new Dictionary<string, string>() {
                     { "top", "   " },
                     { "mid", "  |" },
                     { "bot", "  |" }
@@ -58,10 +58,21 @@ namespace LcdConverter
         };
 
         public static string Convert(int number)
-        {   
-            return LcdNumbers[number]["top"] + "\n" +
-                   LcdNumbers[number]["mid"] + "\n" +
-                   LcdNumbers[number]["bot"];
+        {
+            var top = "";
+            var mid = "";
+            var bot = "";
+
+            foreach (char digit in number.ToString())
+            {
+                top += LcdNumbers[digit]["top"];
+                mid += LcdNumbers[digit]["mid"];
+                bot += LcdNumbers[digit]["bot"];
+            }
+
+            return top + "\n" +
+                   mid + "\n" +
+                   bot;
         }
     }
 }
