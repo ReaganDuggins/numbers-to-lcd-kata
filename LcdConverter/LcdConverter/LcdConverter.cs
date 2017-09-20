@@ -50,21 +50,10 @@ namespace LcdConverter
         };
 
         public static string Convert(int number)
-        {
-            string top = LcdNumbers[number]["top"];
-            string mid = LcdNumbers[number]["mid"];
-            string bot = LcdNumbers[number]["bot"];
-
-            if (number == 2)
-            {
-                top = LcdNumbers[number]["top"];
-                mid = LcdNumbers[number]["mid"];
-                bot = LcdNumbers[number]["bot"];
-            }
-            
-            return top + "\n" +
-                   mid + "\n" +
-                   bot;
+        {   
+            return LcdNumbers[number]["top"] + "\n" +
+                   LcdNumbers[number]["mid"] + "\n" +
+                   LcdNumbers[number]["bot"];
         }
     }
 }
