@@ -32,15 +32,20 @@ namespace LcdConverter
     {
         public static string Convert(int number)
         {
-            if(number == 2)
+            string top = "   ";
+            string mid = "  |";
+            string bot = "  |";
+
+            if (number == 2)
             {
-                return " _ " + "\n" +
-                       " _|" + "\n" +
-                       "|_ ";
+                top = " _ ";
+                mid = " _|";
+                bot = "|_ ";
             }
-            return "   " + "\n" +
-                   "  |" + "\n" +
-                   "  |";
+            
+            return top + "\n" +
+                   mid + "\n" +
+                   bot;
         }
     }
 }
