@@ -16,4 +16,12 @@ describe("NumbersToLcd", function() {
                               "|_ ");
   });
 
+  it("should display 12 as lcd", function () {
+    var lcdNumber = toLcd(12);
+
+    expect(lcdNumber).toEqual("  |" + " _ " + "\n" +
+                              "  |" + " _|" + "\n" +
+                              "  |" + "|_ ")
+  })
+
 });

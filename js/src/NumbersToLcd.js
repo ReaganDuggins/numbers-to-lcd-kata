@@ -1,10 +1,10 @@
 lcdMap = {
-  1 : {
+  "1" : {
     "top" : "  |",
     "mid" : "  |",
     "bot" : "  |",
   },
-  2 : {
+  "2" : {
     "top" : " _ ",
     "mid" : " _|",
     "bot" : "|_ ",
@@ -12,11 +12,17 @@ lcdMap = {
 }
 
 function toLcd(number) {
-  var topRow, midRow, botRow;
+  let topRow = "";
+  let midRow = "";
+  let botRow = "";
 
-  topRow = lcdMap[number]["top"];
-  midRow = lcdMap[number]["mid"];
-  botRow = lcdMap[number]["bot"];
+  let digits = number.toString().split("");
+  digits.map((digit) => {
+    topRow += lcdMap[digit]["top"];
+    midRow += lcdMap[digit]["mid"];
+    botRow += lcdMap[digit]["bot"];
+  })
+  
 
   return topRow + "\n" +
          midRow + "\n" +
