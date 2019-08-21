@@ -1,13 +1,22 @@
-function toLcd(number) {
-  var topRow = "  |";
-  var midRow = "  |";
-  var botRow = "  |";
-
-  if (number === 2) {
-    topRow = " _ ";
-    midRow = " _|";
-    botRow = "|_ ";
+lcdMap = {
+  1 : {
+    "top" : "  |",
+    "mid" : "  |",
+    "bot" : "  |",
+  },
+  2 : {
+    "top" : " _ ",
+    "mid" : " _|",
+    "bot" : "|_ ",
   }
+}
+
+function toLcd(number) {
+  var topRow, midRow, botRow;
+
+  topRow = lcdMap[number]["top"];
+  midRow = lcdMap[number]["mid"];
+  botRow = lcdMap[number]["bot"];
 
   return topRow + "\n" +
          midRow + "\n" +
