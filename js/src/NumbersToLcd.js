@@ -1,5 +1,9 @@
 function toLcd(number) {
-  return "  |" + "\n" +
-         "  |" + "\n" +
-         "  |"
+  var topRow = "  |";
+  var midRow = "  |";
+  var botRow = "  |";
+
+  return topRow + "\n" +
+         midRow + "\n" +
+         botRow;
 }
